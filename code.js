@@ -52,11 +52,11 @@ function Winner(){
     }
 }
 // Run the game
-function game(){
-    for (i = 0; i < 20; i++){
-        playround()
-        Winner()
-        if(computerscore === 5 || playerscore === 5)break;
-    }
-}
-game()
+// function game(){
+//     for (i = 0; i < 20; i++){
+//         playround()
+//         Winner()
+//         if(computerscore === 5 || playerscore === 5)break;
+//     }
+// }
+// game()
