@@ -4,6 +4,14 @@ function computerplay(){
     const plays = ["Rock", "Paper", "Scissor"];
     return comp_outcome = plays[Math.floor(Math.random() * plays.length)];
 }
+// User input
+var rock = document.getElementById("rock")
+var paper = document.getElementById("paper")
+var Scissor = document.getElementById("scissor")
+function print(e){
+    var base = addeventlistener("click", e)
+    console.log(base)
+)
 // User input function here
 function playersselection(){
     const player_select = prompt("Rock, Paper, Scissor  ");

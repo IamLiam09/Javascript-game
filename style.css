@@ -1,5 +1,119 @@
-body{
+*{
     margin:0;
     padding: 0;
-    border: 0;
+}
+body{
+    margin-top: 35px;
+    background-color: rgb(229, 209, 157);  
+}
+#all{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h6{
+    font-size: 35px;
+}
+.play{
+    padding-bottom: 30px;
+}
+.play h1{
+    font-size: 150px;
+    color: white;
+}
+.rect{
+    width: 300px;
+    height: 50px;
+    display: block;
+    border: 3px solid white;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+.game{
+    display: flex;
+}
+.clickin{
+    flex-direction: row;
+    text-align: center;
+}
+.clickin img{
+    border-radius: 50%; 
+    height: 60%;
+    width: 60%;
+}
+.clickin img:hover{
+    box-shadow: 2px 2px 3px ;
+    transform: scale(1.2, 1.2);
+    background-color: rgb(183, 185, 61);
+}
+#you_win{
+    position: fixed;
+    display: none;
+    background-color: rgba(0, 255, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+#you_win h5{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50rem;
+    color: rgb(255, 255, 255, 0.5);
+    transform : translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+#you_lose{
+    position: fixed;
+    display: none;
+    background-color: rgba(255, 69, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    cursor: pointer
+}
+#you_lose h5{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 10rem;
+    color: rgb(255, 255, 255, 0.5);
+    transform : translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+#draw{ 
+    position: fixed;
+    display: none;
+    background-image: linear-gradient(0deg,
+    rgba(0, 255, 0, 0.5),
+    rgba(255, 69, 0, 0.5));
+    background-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    cursor: pointer
+}
+#draw h5{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 10rem;
+    color: rgb(255, 255, 255, 0.5);
+    transform : translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
