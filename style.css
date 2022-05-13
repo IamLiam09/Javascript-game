@@ -3,14 +3,14 @@
     padding: 0;
 }
 body{
-    margin-top: 35px;
-    background-color: rgb(229, 209, 157);  
+    background-color: #0000FF;  
 }
 #all{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 50px;
 }
 
 h6{
@@ -21,15 +21,18 @@ h6{
 }
 .play h1{
     font-size: 150px;
-    color: white;
+    color: rgb(223, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .rect{
     width: 300px;
     height: 50px;
     display: block;
-    border: 3px solid white;
+    border: 3px solid black;
     border-radius: 30px;
-    margin-bottom: 10px;
+    margin-top: 180px;
 }
 .game{
     display: flex;
@@ -117,3 +120,24 @@ h6{
     transform : translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
+.spacer{
+    aspect-ratio: 960/540;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+.waves{
+    background-image: url('img/waves.svg');
+}
+.bottom_spacer{
+    aspect-ratio: 960/540;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+.bottom_waves{
+    background-image: url('img/bottom_waves.svg');
+}
+     

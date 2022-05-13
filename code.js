@@ -8,10 +8,10 @@ function computerplay(){
 var rock = document.getElementById("rock")
 var paper = document.getElementById("paper")
 var Scissor = document.getElementById("scissor")
+rock.addeventlistener('click', print)
 function print(e){
-    var base = addeventlistener("click", e)
-    console.log(base)
-)
+    console.log("man")
+}
 // User input function here
 function playersselection(){
     const player_select = prompt("Rock, Paper, Scissor  ");
