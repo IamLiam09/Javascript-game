@@ -40,16 +40,40 @@ h6{
 .clickin{
     flex-direction: row;
     text-align: center;
+    padding: 20px;
 }
-.clickin img{
+.button{
     border-radius: 50%; 
-    height: 60%;
-    width: 60%;
+    height: 150px;
+    width: 150px;
+    border: none;
+    transition-duration: .60s;
 }
-.clickin img:hover{
-    box-shadow: 2px 2px 3px ;
-    transform: scale(1.2, 1.2);
-    background-color: rgb(183, 185, 61);
+.button1{
+    box-shadow: o 30px 60px rgba(0, 0, 0, .5);
+    background:url(img/rock.png);
+}
+.button1:hover{
+    box-shadow: o 5px 10px rgba(0, 0, 0, .5);
+    transform: scale(0.95);
+}
+.button2{
+    box-shadow: o 30px 60px rgba(0, 0, 0, .5);
+    background:url(img/paper.png);
+
+}
+.button2:hover{
+    box-shadow: o 5px 10px rgba(0, 0, 0, .5);
+    transform: scale(0.95);
+}
+.button3{
+    box-shadow: o 30px 60px rgba(0, 0, 0, .5);
+    background:url(img/scissor.png);
+
+}
+.button3:hover{
+    box-shadow: o 5px 10px rgba(0, 0, 0, .5);
+    transform: scale(0.95);
 }
 #you_win{
     position: fixed;
