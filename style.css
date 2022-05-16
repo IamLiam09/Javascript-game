@@ -52,6 +52,9 @@ h6{
 .button1{
     box-shadow: o 30px 60px rgba(0, 0, 0, .5);
     background:url(img/rock.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+
 }
 .button1:hover{
     box-shadow: o 5px 10px rgba(0, 0, 0, .5);
@@ -60,7 +63,9 @@ h6{
 .button2{
     box-shadow: o 30px 60px rgba(0, 0, 0, .5);
     background:url(img/paper.png);
-
+    background-repeat: no-repeat;
+    background-position: center center;
+    
 }
 .button2:hover{
     box-shadow: o 5px 10px rgba(0, 0, 0, .5);
@@ -69,6 +74,8 @@ h6{
 .button3{
     box-shadow: o 30px 60px rgba(0, 0, 0, .5);
     background:url(img/scissor.png);
+    background-repeat: no-repeat;
+    background-position: center center;
 
 }
 .button3:hover{

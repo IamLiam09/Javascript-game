@@ -1,23 +1,38 @@
 var playerscore = 0;
 var computerscore = 0;
+// computer play
 function computerplay(){
     const plays = ["Rock", "Paper", "Scissor"];
-    return comp_outcome = plays[Math.floor(Math.random() * plays.length)];
+    comp_outcome = plays[Math.floor(Math.random() * plays.length)];
+    return comp_outcome
 }
 // User input
 var rock = document.getElementById("rock")
 var paper = document.getElementById("paper")
 var scissor = document.getElementById("scissor")
-var userrock = rock.addEventListener('click', playround())
-var userpaper = paper.addEventListener('click', playround())
-var userscissor = scissor.addEventListener('click', playround())
-
-// User input function here
-// function playersselection(){
-   
-//     return player_select;
-// }
-// At random the computer plays
+var userrock = rock.addEventListener('click', buttonrock)
+var userpaper = paper.addEventListener('click', buttonpaper)
+var userscissor = scissor.addEventListener('click', buttonscissor)
+// function for every click 
+function buttonrock(){
+    playerSelect = "Rock"
+    var complay = computerplay()
+    var ans = playround(playerSelect, complay)
+    console.log(ans)
+}
+function buttonpaper(){
+    playerSelect = "Paper"
+    var complay = computerplay()
+    var ans = playround(playerSelect, complay)
+    console.log(ans)
+}
+function buttonscissor(){
+    playerSelect = "Scissor"
+    var complay = computerplay()
+    var ans = playround(playerSelect, complay)
+    console.log(ans)
+}
+// the game logic
 function playround(playerselection, computerselection){
     var computerselection
     var playerselection 
@@ -26,13 +41,13 @@ function playround(playerselection, computerselection){
     var same = "Draw"
     if(computerselection === "Rock" && playerselection === "Scissor"){
         computerscore++
-       return( compwin + " Rock beats Scissors")
+       return(compwin + " Rock beats Scissors")
     } else if (computerselection === "Paper" && playerselection === "Rock"){
         computerscore++
-       return( compwin + " Paper beats Rock")
+       return(compwin + " Paper beats Rock")
     } else if(computerselection === "Scissor" && playerselection === "Paper"){
         computerscore++
-       return( compwin + " Scissor beats Paper")
+       return(compwin + " Scissor beats Paper")
     } else if(playerselection === "Scissor" && computerselection === "Paper"){
         playerscore++
        return(playerwin + " Scissor beats Paper")
@@ -67,13 +82,6 @@ function playround(playerselection, computerselection){
 //         if(computerscore === 5 || playerscore === 5)break;
 //     }
 // }
-// playround()
-// console.log(playersselection())
-const playerSelect = "Rock";
-const computerSelect = computerplay();
-console.log(computerplay())
-console.log(playerscore)
-console.log(computerscore)
-console.log(playround(playerSelect, computerSelect))
-console.log(playerscore)
-console.log(computerscore)
+// // playround()
+// console.log(complay)
+
