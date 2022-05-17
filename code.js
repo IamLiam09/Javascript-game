@@ -1,10 +1,36 @@
 var playerscore = 0;
 var computerscore = 0;
+var compwin = "You Lose!"
+var playerwin = "You Win!"
+var same = "Draw"
 // computer play
 function computerplay(){
     const plays = ["Rock", "Paper", "Scissor"];
     comp_outcome = plays[Math.floor(Math.random() * plays.length)];
     return comp_outcome
+}
+// The overlay effect for when the player wins or loses
+function playerwinoverlay(){ 
+    document.getElementById("you_win").style.display = "block";
+    setTimeout(Turnoffwin, 400)
+} 
+function compwinoverlay(){
+    document.getElementById("you_lose").style.display = "block";
+    setTimeout(Turnofflose, 400)
+}
+function draw(){
+    document.getElementById("draw").style.display = "block";
+    setTimeout(drawoff, 400)
+}
+// The turnoff for the overlay effect
+function Turnoffwin(){
+    document.getElementById("you_win").style.display = "none";
+}
+function Turnofflose(){
+    document.getElementById("you_lose").style.display = "none";
+}
+function drawoff(){
+    document.getElementById("draw").style.display = "none";
 }
 // User input
 var rock = document.getElementById("rock")
@@ -36,32 +62,38 @@ function buttonscissor(){
 function playround(playerselection, computerselection){
     var computerselection
     var playerselection 
-    var compwin = "You Lose!"
-    var playerwin = "You Win!"
-    var same = "Draw"
     if(computerselection === "Rock" && playerselection === "Scissor"){
         computerscore++
+        compwinoverlay()
        return(compwin + " Rock beats Scissors")
     } else if (computerselection === "Paper" && playerselection === "Rock"){
         computerscore++
+        compwinoverlay()
        return(compwin + " Paper beats Rock")
     } else if(computerselection === "Scissor" && playerselection === "Paper"){
         computerscore++
+        compwinoverlay()
        return(compwin + " Scissor beats Paper")
     } else if(playerselection === "Scissor" && computerselection === "Paper"){
         playerscore++
+        playerwinoverlay()
        return(playerwin + " Scissor beats Paper")
     } else if (playerselection === "Paper" && computerselection === "Rock"){
         playerscore++
+        playerwinoverlay()
        return(playerwin + " Paper beats Rock")
     } else if(playerselection === "Rock" && computerselection === "Scissor"){
         playerscore++
+        playerwinoverlay()
        return(playerwin + " Rock beats Scissors")
     } else if (computerselection === "Paper" && playerselection === "Paper"){
+        draw()
        return(same)
     } else if (computerselection === "Rock" && playerselection === "Rock"){
+        draw()
        return(same)
     } else if (computerselection === "Scissor" && playerselection === "Scissor"){
+        draw()
        return(same)
     }
 }
