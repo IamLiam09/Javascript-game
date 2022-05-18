@@ -32,6 +32,13 @@ function Turnofflose(){
 function drawoff(){
     document.getElementById("draw").style.display = "none";
 }
+// Update the score board
+function scoreboard(){
+    const pscore = document.getElementById("pscore")
+    const cscore = document.getElementById("cscore")
+    pscore.textContent = playerscore
+    cscore.textContent = computerscore
+}
 // User input
 var rock = document.getElementById("rock")
 var paper = document.getElementById("paper")
@@ -65,18 +72,22 @@ function playround(playerselection, computerselection){
     if(computerselection === "Rock" && playerselection === "Scissor"){
         computerscore++
         compwinoverlay()
+        scoreboard()
        return(compwin + " Rock beats Scissors")
     } else if (computerselection === "Paper" && playerselection === "Rock"){
         computerscore++
         compwinoverlay()
+        scoreboard()
        return(compwin + " Paper beats Rock")
     } else if(computerselection === "Scissor" && playerselection === "Paper"){
         computerscore++
         compwinoverlay()
+        scoreboard()
        return(compwin + " Scissor beats Paper")
     } else if(playerselection === "Scissor" && computerselection === "Paper"){
         playerscore++
         playerwinoverlay()
+        scoreboard()
        return(playerwin + " Scissor beats Paper")
     } else if (playerselection === "Paper" && computerselection === "Rock"){
         playerscore++
@@ -85,6 +96,7 @@ function playround(playerselection, computerselection){
     } else if(playerselection === "Rock" && computerselection === "Scissor"){
         playerscore++
         playerwinoverlay()
+        scoreboard()
        return(playerwin + " Rock beats Scissors")
     } else if (computerselection === "Paper" && playerselection === "Paper"){
         draw()
@@ -98,14 +110,14 @@ function playround(playerselection, computerselection){
     }
 }
 // Break the game if the condition is met
-// function Winner(){
-//     var Total_score = 5
-//     if(playerscore === Total_score){
-//         console.log("Congrats, you deafeated a bot");
-//     } else if(computerscore === Total_score){
-//         console.log("You suck, You lost to a bot");
-//     }
-// }
+function Winner(){
+    var Total_score = 5
+    if(playerscore === Total_score){
+        console.log("Congrats, you deafeated a bot");
+    } else if(computerscore === Total_score){
+        console.log("You suck, You lost to a bot");
+    }
+}
 // Run the game
 // function game(){
 //     for (i = 0; i < 20; i++){
