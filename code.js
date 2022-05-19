@@ -51,18 +51,21 @@ function buttonrock(){
     playerSelect = "Rock"
     var complay = computerplay()
     var ans = playround(playerSelect, complay)
+    Winner()
     console.log(ans)
 }
 function buttonpaper(){
     playerSelect = "Paper"
     var complay = computerplay()
     var ans = playround(playerSelect, complay)
+    Winner()
     console.log(ans)
 }
 function buttonscissor(){
     playerSelect = "Scissor"
     var complay = computerplay()
     var ans = playround(playerSelect, complay)
+    Winner()
     console.log(ans)
 }
 // the game logic
@@ -114,18 +117,9 @@ function Winner(){
     var Total_score = 5
     if(playerscore === Total_score){
         console.log("Congrats, you deafeated a bot");
-    } else if(computerscore === Total_score){
+    }if(computerscore === Total_score){
         console.log("You suck, You lost to a bot");
     }
 }
-// Run the game
-// function game(){
-//     for (i = 0; i < 20; i++){
-//         playround()
-//         Winner()
-//         if(computerscore === 5 || playerscore === 5)break;
-//     }
-// }
-// // playround()
-// console.log(complay)
+
 
