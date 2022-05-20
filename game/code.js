@@ -3,6 +3,14 @@ var computerscore = 0;
 var compwin = "You Lose!"
 var playerwin = "You Win!"
 var same = "Draw"
+
+// User input
+var rock = document.getElementById("rock")
+var paper = document.getElementById("paper")
+var scissor = document.getElementById("scissor")
+var userrock = rock.addEventListener('click', buttonrock)
+var userpaper = paper.addEventListener('click', buttonpaper)
+var userscissor = scissor.addEventListener('click', buttonscissor)
 // computer play
 function computerplay(){
     const plays = ["Rock", "Paper", "Scissor"];
@@ -39,34 +47,24 @@ function scoreboard(){
     pscore.textContent = playerscore
     cscore.textContent = computerscore
 }
-// User input
-var rock = document.getElementById("rock")
-var paper = document.getElementById("paper")
-var scissor = document.getElementById("scissor")
-var userrock = rock.addEventListener('click', buttonrock)
-var userpaper = paper.addEventListener('click', buttonpaper)
-var userscissor = scissor.addEventListener('click', buttonscissor)
 // function for every click 
 function buttonrock(){
     playerSelect = "Rock"
     var complay = computerplay()
     var ans = playround(playerSelect, complay)
     Winner()
-    console.log(ans)
 }
 function buttonpaper(){
     playerSelect = "Paper"
     var complay = computerplay()
     var ans = playround(playerSelect, complay)
     Winner()
-    console.log(ans)
 }
 function buttonscissor(){
     playerSelect = "Scissor"
     var complay = computerplay()
     var ans = playround(playerSelect, complay)
     Winner()
-    console.log(ans)
 }
 // the game logic
 function playround(playerselection, computerselection){
@@ -116,9 +114,9 @@ function playround(playerselection, computerselection){
 function Winner(){
     var Total_score = 5
     if(playerscore === Total_score){
-        console.log("Congrats, you deafeated a bot");
+       window.location.replace("win.html")
     }if(computerscore === Total_score){
-        console.log("You suck, You lost to a bot");
+        window.location.replace("lose.html")
     }
 }
 
