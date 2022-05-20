@@ -64,7 +64,7 @@ p{
 }
 .button1{
     box-shadow: o 30px 60px rgba(0, 0, 0, .5);
-    background:url(img/rock.png);
+    background:url(rock.png);
     background-repeat: no-repeat;
     background-position: center center;
 
@@ -75,7 +75,7 @@ p{
 }
 .button2{
     box-shadow: o 30px 60px rgba(0, 0, 0, .5);
-    background:url(img/paper.png);
+    background:url(paper.png);
     background-repeat: no-repeat;
     background-position: center center;
     
@@ -86,7 +86,7 @@ p{
 }
 .button3{
     box-shadow: o 30px 60px rgba(0, 0, 0, .5);
-    background:url(img/scissor.png);
+    background:url(scissor.png);
     background-repeat: no-repeat;
     background-position: center center;
 
@@ -199,7 +199,7 @@ p{
     background-size: cover;
 }
 .waves{
-    background-image: url('img/waves.svg');
+    background-image: url('waves.svg');
 }
 .bottom_spacer{
     aspect-ratio: 960/540;
@@ -209,6 +209,6 @@ p{
     background-size: cover;
 }
 .bottom_waves{
-    background-image: url('img/bottom_waves.svg');
+    background-image: url('bottom_waves.svg');
 }
      
